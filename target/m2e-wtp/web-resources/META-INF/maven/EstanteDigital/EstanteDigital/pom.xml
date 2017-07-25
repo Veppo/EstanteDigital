@@ -9,12 +9,17 @@
 
 	<name>EstanteDigital</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>3.8.1</junit.version>
 		<hibernate.jpa.version>1.0.1.Final</hibernate.jpa.version>
-		<ejb.api.version>3.0</ejb.api.version>
+		<ejb.api.version>1.0.0.Final</ejb.api.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<javax.inject.version>1</javax.inject.version>
+		<jboss.transaction.version>1.0.1.Final</jboss.transaction.version>
+		<joda.time.version>2.9.9</joda.time.version>
+		<primefaces.version>6.0</primefaces.version>
 	</properties>
 
 	<dependencies>
@@ -30,10 +35,35 @@
 			<version>${hibernate.jpa.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.ejb</groupId>
-			<artifactId>ejb-api</artifactId>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.2_spec</artifactId>
 			<version>${ejb.api.version}</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>${javax.inject.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.transaction</groupId>
+			<artifactId>jboss-transaction-api_1.1_spec</artifactId>
+			<version>${jboss.transaction.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda.time.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>${primefaces.version}</version>
 		</dependency>
 	</dependencies>
 </project>
